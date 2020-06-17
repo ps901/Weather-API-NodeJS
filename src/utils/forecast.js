@@ -8,7 +8,10 @@ var forecast = (lat, lon, callback) => {
             callback("Unable to find location", undefined)
         } else {
             const result = {
-                summary: data.body.daily.data[0].summary+" It is "+data.body.currently.temperature+" degrees outside with "+data.body.currently.precipProbability+"% probability of rain"
+                summary: data.body.daily.data[0].summary+" It is "+data.body.currently.temperature+" degrees outside with "+data.body.currently.precipProbability+"% probability of rain",
+                humidity: data.body.daily.data[0].humidity,
+                minTemp: data.body.daily.data[0].temperatureMin,
+                maxTemp: data.body.daily.data[0].temperatureMax
             }
             callback(undefined, result);
         }

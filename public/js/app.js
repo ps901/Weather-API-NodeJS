@@ -17,8 +17,8 @@ weatherForm.addEventListener("submit", (e)=>{
         if(data.error)
             messageTwo.textContent=data.error;
         else 
-            messageTwo.textContent=data.forecast.summary;
-            console.log(data);
+            messageTwo.textContent=data.forecast.summary+" Humidity: "+data.forecast.humidity+
+            ". Max Temperature: "+data.forecast.maxTemp+". Min Temperature: "+data.forecast.minTemp;
         })
     })
 })  
