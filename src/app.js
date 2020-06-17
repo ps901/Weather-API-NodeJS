@@ -23,13 +23,13 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirPath));
 
 app.get("/", (req,res) => {
-    res.render("index", {title: "Weather App", name: "Perkbai"});
+    res.render("index", {title: "Weather App", name: "ps901"});
 });
 
 app.get("/about", (req,res) => {
     res.render("about", {
         title: "Weather App",
-        name: "Perkbai"
+        name: "ps901"
     })
 })
 
@@ -37,7 +37,7 @@ app.get("/help", (req,res) => {
     res.render("help", {
         message: "kal aana",
         title: "Help",
-        name: "Perkbai"
+        name: "ps901"
     })
 })
 
@@ -73,7 +73,7 @@ app.get("/help/*",(req,res) => {
     res.render("error",{
         error: "Help article not found",
         title: "404",
-        name: "paarth"
+        name: "ps901"
     });
 })
 
@@ -81,7 +81,7 @@ app.get("*", (req,res) => {
     res.render("error",{
         error: "Page not found",
         title: "404",
-        name: "Perkbai"
+        name: "ps901"
     });
 })                                                
 
